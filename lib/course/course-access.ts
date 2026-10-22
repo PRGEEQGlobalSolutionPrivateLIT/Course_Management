@@ -167,8 +167,7 @@
 
 import type { AccessContext } from "../auth/access-control"
 
-import { getCurrentUser } from "./frontend-auth";
-
+import { getCurrentUser } from "../auth/current-user";
 /**
  * =========================================================
  * CURRENT ACCESS CONTEXT
@@ -307,19 +306,19 @@ export function getCurrentAccessContext():
          * selected IDs.
          */
         departmentId:
-            user.departmentIds?.[0],
+            user.departmentId?.[0],
 
         programmeId:
-            user.programmeIds?.[0],
+            user.programmeId?.[0],
 
         batchId:
-            user.batchIds?.[0],
+            user.batchId?.[0],
 
         cohortId:
-            user.cohortIds?.[0],
+            user.cohortId?.[0],
 
         courseId:
-            user.courseIds?.[0],
+            user.courseId?.[0],
 
         /**
          * Learner-specific authorization scope.
