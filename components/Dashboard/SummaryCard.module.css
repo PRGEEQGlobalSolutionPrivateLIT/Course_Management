@@ -1,0 +1,36 @@
+.card{
+
+padding:25px;
+
+border-radius:20px;
+
+background:#dfe6e9;
+
+
+box-shadow:
+
+7px 7px 14px #c5c6cc,
+
+-7px -7px 14px #ffffff;
+
+
+}
+
+
+
+.card h3{
+
+font-size:14px;
+
+color:#6b7280;
+
+}
+
+
+.card strong{
+
+font-size:30px;
+
+color:#174f84;
+
+}

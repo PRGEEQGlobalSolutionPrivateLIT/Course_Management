@@ -1,0 +1,268 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    color: #2a354f;
+    font-size: 22px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 6px;
+    color: #174f84;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.contextCard {
+    display: flex;
+    gap: 45px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: #dfe6e9;
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+}
+
+.contextCard div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contextCard span,
+.summaryCard span {
+    color: #6b7280;
+    font-size: 10px;
+}
+
+.contextCard strong,
+.summaryCard strong {
+    color: #2a354f;
+    font-size: 13px;
+}
+
+.card {
+    padding: 22px;
+    border-radius: 18px;
+    background: #dfe6e9;
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+.sectionHeader {
+    margin-bottom: 18px;
+}
+
+.sectionHeader h3,
+.optionRow h3 {
+    margin: 0;
+    color: #2a354f;
+    font-size: 15px;
+}
+
+.sectionHeader p,
+.optionRow p {
+    margin: 5px 0 0;
+    color: #6b7280;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.modeGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.mode,
+.modeActive {
+    min-height: 90px;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    text-align: left;
+    cursor: pointer;
+    background: #dfe6e9;
+    color: #2a354f;
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.modeActive {
+    color: #174f84;
+    box-shadow:
+        inset 4px 4px 8px #c5c6cc,
+        inset -4px -4px 8px #ffffff;
+}
+
+.mode strong,
+.modeActive strong {
+    display: block;
+    font-size: 12px;
+}
+
+.mode span,
+.modeActive span {
+    display: block;
+    margin-top: 7px;
+    color: #6b7280;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field label {
+    color: #2a354f;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: none;
+    outline: none;
+    border-radius: 11px;
+    background: #dfe6e9;
+    color: #2a354f;
+    font-size: 12px;
+    box-shadow:
+        inset 3px 3px 6px #c5c6cc,
+        inset -3px -3px 6px #ffffff;
+}
+
+.optionRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.toggle {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 20px;
+    background: #c5c6cc;
+    cursor: pointer;
+}
+
+.toggle span {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: 0.2s ease;
+}
+
+.toggleActive {
+    background: #174f84;
+}
+
+.toggleActive span {
+    left: 24px;
+}
+
+.summaryCard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 18px;
+    border-radius: 18px;
+    background: #dfe6e9;
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+}
+
+.summaryCard div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backButton,
+.nextButton {
+    border: none;
+    border-radius: 12px;
+    padding: 11px 21px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.backButton {
+    background: #dfe6e9;
+    color: #174f84;
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+}
+
+.nextButton {
+    background: #174f84;
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .modeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .summaryCard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .formGrid,
+    .modeGrid,
+    .summaryCard {
+        grid-template-columns: 1fr;
+    }
+
+    .contextCard {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

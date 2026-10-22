@@ -1,0 +1,313 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    color: #2a354f;
+    font-size: 22px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 6px;
+    color: #174f84;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.contextCard,
+.card,
+.summaryCard {
+    background: #dfe6e9;
+    border-radius: 18px;
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+.contextCard {
+    display: flex;
+    gap: 45px;
+    padding: 16px 20px;
+}
+
+.contextCard div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contextCard span,
+.summaryCard span {
+    color: #6b7280;
+    font-size: 10px;
+}
+
+.contextCard strong,
+.summaryCard strong {
+    color: #2a354f;
+    font-size: 13px;
+}
+
+.card {
+    padding: 22px;
+}
+
+.sectionHeader {
+    margin-bottom: 18px;
+}
+
+.sectionHeader h3,
+.sectionHeaderWithButton h3 {
+    margin: 0;
+    color: #2a354f;
+    font-size: 16px;
+}
+
+.sectionHeader p,
+.sectionHeaderWithButton p {
+    margin: 5px 0 0;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.modeGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.mode,
+.modeActive {
+    min-height: 85px;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    text-align: left;
+    cursor: pointer;
+    background: #dfe6e9;
+    color: #2a354f;
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.modeActive {
+    color: #174f84;
+    box-shadow:
+        inset 4px 4px 8px #c5c6cc,
+        inset -4px -4px 8px #ffffff;
+}
+
+.mode strong,
+.modeActive strong {
+    display: block;
+    font-size: 13px;
+}
+
+.mode span,
+.modeActive span {
+    display: block;
+    margin-top: 7px;
+    color: #6b7280;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field label {
+    color: #2a354f;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.field input,
+.field select,
+.scheduleRow input,
+.scheduleRow select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px 12px;
+    border: none;
+    outline: none;
+    border-radius: 11px;
+    background: #dfe6e9;
+    color: #2a354f;
+    font-size: 12px;
+    box-shadow:
+        inset 3px 3px 6px #c5c6cc,
+        inset -3px -3px 6px #ffffff;
+}
+
+.dayGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.day,
+.dayActive {
+    border: none;
+    border-radius: 11px;
+    padding: 11px 6px;
+    background: #dfe6e9;
+    color: #2a354f;
+    font-size: 11px;
+    cursor: pointer;
+    box-shadow:
+        3px 3px 7px #c5c6cc,
+        -3px -3px 7px #ffffff;
+}
+
+.dayActive {
+    color: #ffffff;
+    background: #174f84;
+    box-shadow: none;
+}
+
+.sectionHeaderWithButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.addButton {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 11px;
+    padding: 10px 16px;
+    background: #174f84;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.emptyState {
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 11px;
+    box-shadow:
+        inset 2px 2px 5px #c5c6cc,
+        inset -2px -2px 5px #ffffff;
+}
+
+.scheduleList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scheduleRow {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 0.8fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.removeButton {
+    border: none;
+    background: transparent;
+    color: #c92a2a;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.summaryCard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 18px;
+}
+
+.summaryCard div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backButton,
+.nextButton {
+    border: none;
+    border-radius: 12px;
+    padding: 11px 21px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.backButton {
+    background: #dfe6e9;
+    color: #174f84;
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+}
+
+.nextButton {
+    background: #174f84;
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .modeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dayGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .scheduleRow {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .formGrid,
+    .modeGrid,
+    .summaryCard {
+        grid-template-columns: 1fr;
+    }
+
+    .contextCard {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .dayGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

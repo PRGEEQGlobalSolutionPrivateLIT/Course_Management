@@ -1,0 +1,747 @@
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 0 30px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   STEP HEADER
+========================================================= */
+
+.heading {
+    margin-bottom: 22px;
+}
+
+.stepLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+    color: #687386;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.stepNumber {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #174f84;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 750;
+
+    box-shadow:
+        3px 3px 6px #c5c6cc,
+        -3px -3px 6px #ffffff;
+}
+
+.heading h2 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 24px;
+    font-weight: 750;
+    line-height: 1.2;
+}
+
+.heading p {
+    max-width: 700px;
+
+    margin: 7px 0 0;
+
+    color: #687386;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error {
+    width: 100%;
+
+    margin-bottom: 18px;
+    padding: 11px 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 11px;
+
+    background: #f1dddd;
+    color: #a33f3d;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow:
+        inset 2px 2px 4px rgba(190, 120, 120, 0.16),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.65);
+}
+
+.errorIcon {
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #a33f3d;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.formCard,
+.listCard {
+    width: 100%;
+
+    margin-bottom: 18px;
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border-radius: 17px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.sectionHeader {
+    margin-bottom: 19px;
+}
+
+.sectionHeader h3 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.sectionHeader p {
+    margin: 5px 0 0;
+
+    color: #687386;
+
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 17px 18px;
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   FIELDS
+========================================================= */
+
+.field {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.field label {
+    color: #2a354f;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.required {
+    margin-left: 3px;
+
+    color: #c44d4d;
+}
+
+.field input {
+    width: 100%;
+    height: 43px;
+
+    padding: 0 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid transparent;
+    outline: none;
+
+    border-radius: 11px;
+
+    background: #dfe6e9;
+
+    color: #2a354f;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    box-shadow:
+        inset 3px 3px 7px #c5c6cc,
+        inset -3px -3px 7px #ffffff;
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.field input::placeholder {
+    color: #8b96a5;
+}
+
+.field input:focus {
+    border-color: rgba(23, 79, 132, 0.28);
+
+    box-shadow:
+        inset 2px 2px 5px #c5c6cc,
+        inset -2px -2px 5px #ffffff,
+        0 0 0 2px rgba(23, 79, 132, 0.07);
+}
+
+.helperText {
+    margin-top: -1px;
+
+    color: #8a94a2;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.checkboxField {
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.checkboxField input {
+    width: 16px;
+    height: 16px;
+
+    margin: 0;
+
+    accent-color: #174f84;
+
+    cursor: pointer;
+}
+
+.checkboxField label {
+    color: #2a354f;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FORM ACTION
+========================================================= */
+
+.formActions {
+    margin-top: 18px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addButton {
+    min-height: 39px;
+
+    padding: 0 17px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: #174f84;
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        4px 4px 9px #c5c6cc,
+        -4px -4px 9px #ffffff;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.addButton:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        5px 5px 11px #c5c6cc,
+        -5px -5px 11px #ffffff;
+}
+
+
+/* =========================================================
+   LIST HEADER
+========================================================= */
+
+.listHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.listHeader h3 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.listHeader p {
+    margin: 5px 0 0;
+
+    color: #687386;
+
+    font-size: 11px;
+}
+
+.count {
+    min-width: 29px;
+    height: 29px;
+
+    padding: 0 8px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #174f84;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty {
+    min-height: 135px;
+
+    padding: 20px;
+
+    border-radius: 13px;
+
+    background: #dfe6e9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    text-align: center;
+
+    box-shadow:
+        inset 3px 3px 7px #c5c6cc,
+        inset -3px -3px 7px #ffffff;
+}
+
+.emptyIcon {
+    width: 30px;
+    height: 30px;
+
+    margin-bottom: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #dfe6e9;
+    color: #174f84;
+
+    font-size: 18px;
+
+    box-shadow:
+        3px 3px 6px #c5c6cc,
+        -3px -3px 6px #ffffff;
+}
+
+.empty strong {
+    color: #2a354f;
+
+    font-size: 12px;
+}
+
+.empty span {
+    color: #8a94a2;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   OUTCOME LIST
+========================================================= */
+
+.outcomeList {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.outcomeItem {
+    min-width: 0;
+
+    padding: 15px;
+
+    border-radius: 13px;
+
+    background: #dfe6e9;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    box-shadow:
+        4px 4px 9px #c5c6cc,
+        -4px -4px 9px #ffffff;
+}
+
+.outcomeMain {
+    min-width: 0;
+    flex: 1;
+}
+
+.outcomeTop {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 7px;
+}
+
+.outcomeCode {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 23px;
+
+    padding: 0 9px;
+
+    border-radius: 7px;
+
+    background: #174f84;
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.requiredBadge {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 23px;
+
+    padding: 0 8px;
+
+    border-radius: 7px;
+
+    background: rgba(16, 171, 124, 0.12);
+    color: #108a68;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.outcomeItem p {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 10px;
+}
+
+.skills span {
+    padding: 5px 8px;
+
+    border-radius: 7px;
+
+    background: #e4e9ec;
+
+    color: #687386;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    box-shadow:
+        inset 1px 1px 3px #c5c6cc,
+        inset -1px -1px 3px #ffffff;
+}
+
+
+/* =========================================================
+   REMOVE BUTTON
+========================================================= */
+
+.removeButton {
+    flex-shrink: 0;
+
+    min-height: 32px;
+
+    padding: 0 11px;
+
+    border: 1px solid rgba(163, 63, 61, 0.16);
+    border-radius: 9px;
+
+    background: #dfe6e9;
+
+    color: #a33f3d;
+
+    font-family: inherit;
+
+    font-size: 10px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        3px 3px 6px #c5c6cc,
+        -3px -3px 6px #ffffff;
+}
+
+.removeButton:hover {
+    background: #f1dddd;
+}
+
+
+/* =========================================================
+   BOTTOM ACTIONS
+========================================================= */
+
+.actions {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding-top: 2px;
+}
+
+.secondaryButton,
+.primaryButton {
+    min-height: 40px;
+
+    padding: 0 20px;
+
+    border-radius: 11px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.secondaryButton {
+    border: 1px solid rgba(104, 115, 134, 0.18);
+
+    background: #dfe6e9;
+
+    color: #687386;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.secondaryButton:hover {
+    color: #174f84;
+
+    transform: translateY(-1px);
+}
+
+.primaryButton {
+    border: none;
+
+    background: #174f84;
+    color: #ffffff;
+
+    box-shadow:
+        4px 4px 9px #c5c6cc,
+        -4px -4px 9px #ffffff;
+}
+
+.primaryButton:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        5px 5px 11px #c5c6cc,
+        -5px -5px 11px #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fullWidth {
+        grid-column: auto;
+    }
+
+    .formCard,
+    .listCard {
+        padding: 18px;
+    }
+
+    .outcomeItem {
+        flex-direction: column;
+    }
+
+    .removeButton {
+        align-self: flex-start;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .heading h2 {
+        font-size: 21px;
+    }
+
+    .actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .secondaryButton,
+    .primaryButton {
+        width: 100%;
+    }
+
+    .formActions {
+        justify-content: stretch;
+    }
+
+    .addButton {
+        width: 100%;
+    }
+
+}

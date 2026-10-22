@@ -1,0 +1,1644 @@
+/* =========================================================
+   DRAFT COURSES PAGE
+   NEUMORPHIC COURSE MANAGEMENT DESIGN
+========================================================= */
+
+.page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    background: #dfe6e9;
+    color: #2a354f;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    flex-shrink: 0;
+    background: #dfe6e9;
+    box-sizing: border-box;
+    z-index: 20;
+}
+
+.sidebarInner {
+    width: 100%;
+    height: 100vh;
+    padding: 24px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: #dfe6e9;
+
+    box-shadow:
+        7px 0 14px rgba(197, 198, 204, 0.75),
+        -5px 0 12px rgba(255, 255, 255, 0.7);
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 4px 8px 26px;
+}
+
+.brandIcon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #174f84;
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 800;
+
+    box-shadow:
+        4px 4px 9px #c5c6cc,
+        -4px -4px 9px #ffffff;
+}
+
+.brandText {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.brandText strong {
+    color: #2a354f;
+    font-size: 16px;
+    font-weight: 750;
+    line-height: 1.2;
+}
+
+.brandText span {
+    color: #687386;
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.navigationTitle {
+    display: block;
+    padding: 0 12px 9px;
+
+    color: #8a94a3;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.9px;
+}
+
+/* =========================================================
+   NAV ITEM
+========================================================= */
+
+.navItem {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: transparent;
+    color: #687386;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 550;
+
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    transition:
+        transform 0.18s ease,
+        color 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.navItem:hover {
+    color: #174f84;
+    background: #dfe6e9;
+    transform: translateX(2px);
+
+    box-shadow:
+        4px 4px 9px #c5c6cc,
+        -4px -4px 9px #ffffff;
+}
+
+.navActive {
+    color: #174f84;
+    background: #dfe6e9;
+    font-weight: 700;
+
+    box-shadow:
+        inset 4px 4px 8px #c5c6cc,
+        inset -4px -4px 8px #ffffff;
+}
+
+.navActive:hover {
+    transform: none;
+
+    box-shadow:
+        inset 4px 4px 8px #c5c6cc,
+        inset -4px -4px 8px #ffffff;
+}
+
+/* =========================================================
+   NAV ICON
+========================================================= */
+
+.navIcon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dfe6e9;
+    color: #687386;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow:
+        3px 3px 7px #c5c6cc,
+        -3px -3px 7px #ffffff;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.navItem:hover .navIcon {
+    color: #174f84;
+}
+
+.navActive .navIcon {
+    background: #174f84;
+    color: #ffffff;
+
+    box-shadow:
+        2px 2px 5px rgba(23, 79, 132, 0.28),
+        -2px -2px 5px rgba(255, 255, 255, 0.75);
+}
+
+.navLabel {
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* =========================================================
+   SIDEBAR FOOTER
+========================================================= */
+
+.sidebarFooter {
+    margin-top: auto;
+    padding: 16px 10px 3px;
+
+    border-top: 1px solid rgba(104, 115, 134, 0.14);
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebarFooter span {
+    color: #687386;
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.sidebarFooter small {
+    color: #9aa3ad;
+    font-size: 9px;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #dfe6e9;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    padding: 20px 30px 42px;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   BREADCRUMBS
+========================================================= */
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-bottom: 17px;
+
+    color: #8791a0;
+    font-size: 12px;
+}
+
+.breadcrumbs button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    color: #687386;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: color 0.18s ease;
+}
+
+.breadcrumbs button:hover {
+    color: #174f84;
+}
+
+.breadcrumbs span {
+    color: #a0a8b3;
+}
+
+.breadcrumbs strong {
+    color: #2a354f;
+    font-weight: 650;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.pageHeader {
+    min-height: 94px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 28px;
+    margin-bottom: 22px;
+    padding: 22px 24px;
+
+    border-radius: 18px;
+    background: #dfe6e9;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+
+    box-sizing: border-box;
+}
+
+.titleBlock {
+    min-width: 0;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #10ab7c;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.titleBlock h1 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: clamp(22px, 2vw, 28px);
+    line-height: 1.15;
+    font-weight: 750;
+}
+
+.titleBlock p {
+    margin: 7px 0 0;
+
+    color: #687386;
+
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+/* =========================================================
+   CREATE BUTTON
+========================================================= */
+
+.createButton {
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0 17px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #174f84;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.createButton:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        6px 6px 11px #c5c6cc,
+        -6px -6px 11px #ffffff;
+}
+
+.createButton:active {
+    transform: translateY(1px);
+
+    box-shadow:
+        inset 3px 3px 6px rgba(8, 43, 76, 0.4),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.18);
+}
+
+.createButton span {
+    font-size: 17px;
+    line-height: 1;
+}
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.summaryCard {
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 17px 19px;
+
+    border-radius: 16px;
+    background: #dfe6e9;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+.summaryIcon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #dfe6e9;
+    color: #174f84;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    box-shadow:
+        inset 3px 3px 7px #c5c6cc,
+        inset -3px -3px 7px #ffffff;
+}
+
+.summaryCard > div:last-child {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.summaryCard span {
+    color: #7f8998;
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.summaryCard strong {
+    color: #2a354f;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 750;
+}
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.toolbar {
+    min-height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    padding: 10px 14px;
+    margin-bottom: 20px;
+
+    border-radius: 16px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.searchBox {
+    width: min(390px, 100%);
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 0 13px;
+
+    border-radius: 11px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        inset 3px 3px 7px #c5c6cc,
+        inset -3px -3px 7px #ffffff;
+
+    box-sizing: border-box;
+}
+
+.searchBox span {
+    color: #687386;
+    font-size: 17px;
+    line-height: 1;
+}
+
+.searchBox input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+
+    padding: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #2a354f;
+
+    font-family: inherit;
+    font-size: 11px;
+}
+
+.searchBox input::placeholder {
+    color: #929baa;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.filter,
+.filterActive {
+    min-height: 34px;
+
+    padding: 0 12px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: #dfe6e9;
+
+    color: #687386;
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.filter:hover {
+    color: #174f84;
+
+    box-shadow:
+        3px 3px 6px #c5c6cc,
+        -3px -3px 6px #ffffff;
+}
+
+.filterActive {
+    color: #174f84;
+
+    box-shadow:
+        inset 3px 3px 7px #c5c6cc,
+        inset -3px -3px 7px #ffffff;
+}
+
+/* =========================================================
+   LIST HEADER
+========================================================= */
+
+.listHeader {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    padding: 0 16px 9px;
+
+    color: #8a94a3;
+
+    font-size: 9px;
+    font-weight: 750;
+}
+
+/* =========================================================
+   DRAFT LIST
+========================================================= */
+
+.draftList {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+/* =========================================================
+   DRAFT CARD
+========================================================= */
+
+.draftCard {
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 1.8fr)
+        minmax(180px, 1fr)
+        minmax(140px, 0.75fr)
+        auto;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 18px 20px;
+
+    border-radius: 16px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.draftCard:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        8px 8px 15px #c5c6cc,
+        -8px -8px 15px #ffffff;
+}
+
+/* =========================================================
+   COURSE INFO
+========================================================= */
+
+.courseInfo {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.courseIcon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #dfe6e9;
+    color: #174f84;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow:
+        inset 3px 3px 7px #c5c6cc,
+        inset -3px -3px 7px #ffffff;
+}
+
+.courseText {
+    min-width: 0;
+}
+
+.courseText h2 {
+    margin: 0 0 6px;
+
+    overflow: hidden;
+
+    color: #2a354f;
+
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.courseMeta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-bottom: 7px;
+}
+
+.courseMeta span {
+    color: #818b9a;
+
+    font-size: 9px;
+    line-height: 13px;
+}
+
+.courseMeta span + span {
+    position: relative;
+    padding-left: 9px;
+}
+
+.courseMeta span + span::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #9da6b2;
+
+    transform: translateY(-50%);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tags span {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 21px;
+
+    padding: 0 8px;
+
+    border-radius: 8px;
+
+    background: #dfe6e9;
+
+    color: #687386;
+
+    font-size: 9px;
+    font-weight: 650;
+
+    box-shadow:
+        2px 2px 5px #c5c6cc,
+        -2px -2px 5px #ffffff;
+}
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progressSection {
+    min-width: 0;
+}
+
+.progressTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 8px;
+}
+
+.progressTop span {
+    overflow: hidden;
+
+    color: #687386;
+
+    font-size: 10px;
+    font-weight: 650;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.progressTop strong {
+    flex-shrink: 0;
+
+    color: #174f84;
+
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.progressTrack {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        inset 2px 2px 5px #c5c6cc,
+        inset -2px -2px 5px #ffffff;
+}
+
+.progressBar {
+    height: 100%;
+
+    border-radius: 999px;
+
+    background: #174f84;
+
+    box-shadow:
+        2px 2px 5px rgba(23, 79, 132, 0.22),
+        -1px -1px 3px rgba(255, 255, 255, 0.3);
+
+    transition: width 0.3s ease;
+}
+
+.progressSection small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #929baa;
+
+    font-size: 9px;
+}
+
+/* =========================================================
+   UPDATED
+========================================================= */
+
+.updated {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.updated span {
+    color: #929baa;
+
+    font-size: 9px;
+}
+
+.updated strong {
+    color: #687386;
+
+    font-size: 10px;
+    font-weight: 650;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 8px;
+}
+
+.continueButton {
+    min-height: 36px;
+
+    padding: 0 15px;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: #174f84;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.continueButton:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+}
+
+.continueButton:active {
+    transform: translateY(1px);
+
+    box-shadow:
+        inset 3px 3px 6px rgba(8, 43, 76, 0.4),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.18);
+}
+
+.deleteButton {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: #dfe6e9;
+    color: #8993a2;
+
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+
+    transition:
+        color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.deleteButton:hover {
+    color: #b84242;
+
+    box-shadow:
+        inset 3px 3px 6px #c5c6cc,
+        inset -3px -3px 6px #ffffff;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.emptyState {
+    min-height: 330px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px 24px;
+
+    border-radius: 18px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+
+    text-align: center;
+}
+
+.emptyIcon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    border-radius: 15px;
+
+    background: #dfe6e9;
+    color: #687386;
+
+    font-size: 22px;
+
+    box-shadow:
+        inset 4px 4px 8px #c5c6cc,
+        inset -4px -4px 8px #ffffff;
+}
+
+.emptyState h2 {
+    margin: 0 0 7px;
+
+    color: #2a354f;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.emptyState p {
+    max-width: 430px;
+
+    margin: 0 0 20px;
+
+    color: #687386;
+
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.emptyButton {
+    min-height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 0 16px;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: #174f84;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.emptyButton span {
+    font-size: 16px;
+}
+
+/* =========================================================
+   STATE / LOADING
+========================================================= */
+
+.stateArea {
+    min-height: calc(100vh - 130px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+}
+
+.loadingArea {
+    min-height: 330px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingCard {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 18px 22px;
+
+    border-radius: 15px;
+
+    background: #dfe6e9;
+
+    color: #687386;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+
+    border: 3px solid #c5cbd2;
+    border-top-color: #174f84;
+
+    border-radius: 50%;
+
+    animation:
+        draftPageSpin
+        0.8s linear infinite;
+}
+
+@keyframes draftPageSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.errorCard {
+    width: min(560px, 100%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+.errorIcon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #174f84;
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.stateContent {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.stateContent h1 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stateContent p {
+    margin: 0;
+
+    color: #687386;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   DELETE MODAL
+========================================================= */
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(42, 53, 79, 0.28);
+
+    backdrop-filter: blur(3px);
+}
+
+.modal {
+    width: min(420px, 100%);
+
+    padding: 26px;
+
+    border-radius: 18px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        10px 10px 22px #bfc1c7,
+        -10px -10px 22px #ffffff;
+}
+
+.modalIcon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 13px;
+
+    background: #dfe6e9;
+    color: #174f84;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow:
+        inset 3px 3px 7px #c5c6cc,
+        inset -3px -3px 7px #ffffff;
+}
+
+.modal h2 {
+    margin: 0 0 8px;
+
+    color: #2a354f;
+
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.modal p {
+    margin: 0;
+
+    color: #687386;
+
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+
+    margin-top: 23px;
+}
+
+.cancelButton,
+.confirmDeleteButton {
+    min-height: 37px;
+
+    padding: 0 15px;
+
+    border: 0;
+    border-radius: 11px;
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.cancelButton {
+    background: #dfe6e9;
+    color: #687386;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.cancelButton:hover {
+    color: #174f84;
+
+    box-shadow:
+        inset 3px 3px 6px #c5c6cc,
+        inset -3px -3px 6px #ffffff;
+}
+
+.confirmDeleteButton {
+    background: #174f84;
+    color: #ffffff;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.confirmDeleteButton:hover {
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 225px;
+        min-width: 225px;
+    }
+
+    .content {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .draftCard {
+        grid-template-columns:
+            minmax(230px, 1.5fr)
+            minmax(160px, 1fr)
+            auto
+            auto;
+
+        gap: 16px;
+    }
+
+    .updated {
+        display: none;
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .page {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+
+        position: relative;
+    }
+
+    .sidebarInner {
+        height: auto;
+        min-height: auto;
+
+        padding: 14px 16px;
+    }
+
+    .brand {
+        padding-bottom: 14px;
+    }
+
+    .navigation {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .navigationTitle {
+        grid-column: 1 / -1;
+    }
+
+    .sidebarFooter {
+        display: none;
+    }
+
+    .main {
+        min-height: auto;
+    }
+
+    .summaryGrid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .searchBox {
+        width: 100%;
+    }
+
+    .draftCard {
+        grid-template-columns:
+            minmax(240px, 1fr)
+            minmax(180px, 1fr)
+            auto;
+    }
+
+    .progressSection {
+        grid-column: 1 / 3;
+    }
+
+    .actions {
+        grid-column: 3;
+        grid-row: 1 / 3;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .pageHeader {
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 19px;
+    }
+
+    .createButton {
+        width: 100%;
+    }
+
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbar {
+        padding: 12px;
+    }
+
+    .filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 2px;
+    }
+
+    .filter,
+    .filterActive {
+        flex-shrink: 0;
+    }
+
+    .draftCard {
+        grid-template-columns: 1fr;
+        gap: 17px;
+
+        padding: 18px;
+    }
+
+    .progressSection {
+        grid-column: auto;
+    }
+
+    .updated {
+        display: flex;
+    }
+
+    .actions {
+        grid-column: auto;
+        grid-row: auto;
+
+        justify-content: stretch;
+    }
+
+    .continueButton {
+        flex: 1;
+    }
+
+    .listHeader {
+        display: none;
+    }
+
+    .stateArea {
+        padding: 20px 10px;
+    }
+
+    .errorCard {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .brandIcon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brandText strong {
+        font-size: 15px;
+    }
+
+    .content {
+        padding: 13px;
+    }
+
+    .pageHeader {
+        padding: 17px;
+    }
+
+    .titleBlock h1 {
+        font-size: 22px;
+    }
+
+    .summaryCard {
+        min-height: 82px;
+    }
+
+    .draftCard {
+        padding: 16px;
+    }
+
+    .modal {
+        padding: 21px;
+    }
+
+    .modalActions {
+        flex-direction: column-reverse;
+    }
+
+    .cancelButton,
+    .confirmDeleteButton {
+        width: 100%;
+    }
+}

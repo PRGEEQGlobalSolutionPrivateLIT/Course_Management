@@ -1,0 +1,344 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 6px;
+    color: #174f84;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.header h2 {
+    margin: 0;
+    color: #2a354f;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Context */
+
+.contextCard {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: #dfe6e9;
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+}
+
+.contextCard div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contextCard span {
+    color: #6b7280;
+    font-size: 10px;
+}
+
+.contextCard strong {
+    color: #2a354f;
+    font-size: 13px;
+}
+
+/* Card */
+
+.card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 22px;
+    border-radius: 18px;
+    background: #dfe6e9;
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+.sectionHeader {
+    margin-bottom: 20px;
+}
+
+.sectionHeader h3 {
+    margin: 0;
+    color: #2a354f;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sectionHeader p {
+    margin: 5px 0 0;
+    color: #6b7280;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Form */
+
+.formGrid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(220px, 0.7fr);
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field label {
+    color: #2a354f;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-radius: 11px;
+    padding: 0 13px;
+    background: #dfe6e9;
+    color: #2a354f;
+    font-size: 12px;
+    box-shadow:
+        inset 3px 3px 6px #c5c6cc,
+        inset -3px -3px 6px #ffffff;
+}
+
+.field input::placeholder {
+    color: #9ca3af;
+}
+
+.field input:focus,
+.field select:focus {
+    box-shadow:
+        inset 4px 4px 7px #c5c6cc,
+        inset -4px -4px 7px #ffffff;
+}
+
+/* Add button */
+
+.addButton {
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    padding: 11px 20px;
+    background: #174f84;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    opacity: 0.92;
+}
+
+/* Empty state */
+
+.emptyState {
+    padding: 28px 20px;
+    border-radius: 14px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 11px;
+    background: #dfe6e9;
+    box-shadow:
+        inset 3px 3px 6px #c5c6cc,
+        inset -3px -3px 6px #ffffff;
+}
+
+/* Team list */
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns:
+        42px
+        minmax(0, 1fr)
+        auto;
+    align-items: center;
+    gap: 14px;
+    min-height: 62px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    border-radius: 14px;
+    background: #dfe6e9;
+    box-shadow:
+        inset 2px 2px 5px #c5c6cc,
+        inset -2px -2px 5px #ffffff;
+}
+
+/* Avatar */
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #174f84;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Member */
+
+.memberInfo {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.memberInfo strong {
+    overflow: hidden;
+    color: #2a354f;
+    font-size: 12px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.memberInfo span {
+    color: #6b7280;
+    font-size: 10px;
+}
+
+/* Remove */
+
+.removeButton {
+    border: none;
+    background: transparent;
+    color: #c92a2a;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.removeButton:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4px;
+}
+
+.backButton,
+.nextButton {
+    min-width: 90px;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.backButton {
+    background: #dfe6e9;
+    color: #174f84;
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+}
+
+.backButton:hover {
+    box-shadow:
+        inset 4px 4px 8px #c5c6cc,
+        inset -4px -4px 8px #ffffff;
+}
+
+.nextButton {
+    background: #174f84;
+    color: #ffffff;
+}
+
+.nextButton:hover {
+    opacity: 0.92;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .contextCard {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        padding: 16px;
+    }
+
+    .item {
+        grid-template-columns:
+            36px
+            minmax(0, 1fr)
+            auto;
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .actions {
+        gap: 12px;
+    }
+
+    .backButton,
+    .nextButton {
+        flex: 1;
+    }
+}

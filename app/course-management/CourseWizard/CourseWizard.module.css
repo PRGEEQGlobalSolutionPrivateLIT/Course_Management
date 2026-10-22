@@ -1,0 +1,667 @@
+/* =========================================================
+   PAGE CONTAINER
+========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 26px 30px 40px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.pageHeader {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 20px;
+}
+
+.headerText {
+    min-width: 0;
+}
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #687386;
+
+    font-size: 10px;
+    font-weight: 750;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.headerText h1 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 29px;
+    font-weight: 750;
+
+    line-height: 1.2;
+}
+
+.headerText p {
+    margin: 7px 0 0;
+
+    color: #687386;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   COURSE ID CARD
+========================================================= */
+
+.courseIdCard {
+    min-width: 190px;
+
+    padding: 12px 16px;
+
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    background: #dfe6e9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 5px;
+
+    box-shadow:
+        5px 5px 11px #c5c6cc,
+        -5px -5px 11px #ffffff;
+}
+
+.courseIdCard span {
+    color: #687386;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.courseIdCard strong {
+    max-width: 220px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #174f84;
+
+    font-size: 12px;
+    font-weight: 750;
+
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PAGE CONTEXT
+========================================================= */
+
+.pageContext {
+    margin-bottom: 20px;
+}
+
+.contextLabel {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #687386;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    letter-spacing: 0.03em;
+}
+
+.pageContext h2 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pageContext p {
+    margin: 5px 0 0;
+
+    color: #687386;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   STEPPER
+========================================================= */
+
+.stepper {
+    width: 100%;
+
+    margin-bottom: 22px;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        5px 5px 11px #c5c6cc,
+        -5px -5px 11px #ffffff;
+
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #aeb7bf transparent;
+}
+
+.stepperInner {
+    min-width: max-content;
+
+    display: flex;
+    align-items: center;
+}
+
+.stepWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.step {
+    min-width: max-content;
+
+    padding: 2px 3px;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #687386;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.step:disabled {
+    cursor: default;
+}
+
+.step:not(:disabled):hover .stepLabel {
+    color: #174f84;
+}
+
+.stepNumber {
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dfe6e9;
+
+    color: #687386;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    box-shadow:
+        3px 3px 7px #c5c6cc,
+        -3px -3px 7px #ffffff;
+}
+
+.stepLabel {
+    color: #687386;
+
+    transition: color 0.18s ease;
+}
+
+
+/* =========================================================
+   ACTIVE STEP
+========================================================= */
+
+.active .stepNumber {
+    background: #174f84;
+
+    color: #ffffff;
+
+    box-shadow:
+        3px 3px 7px #c5c6cc,
+        -3px -3px 7px #ffffff;
+}
+
+.active .stepLabel {
+    color: #174f84;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   COMPLETED STEP
+========================================================= */
+
+.completed .stepNumber {
+    background: #10ab7c;
+
+    color: #ffffff;
+}
+
+.completed .stepLabel {
+    color: #10ab7c;
+
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   CONNECTOR
+========================================================= */
+
+.stepConnector {
+    width: 24px;
+    height: 1px;
+
+    margin: 0 8px;
+
+    flex-shrink: 0;
+
+    background: #b8c0c8;
+}
+
+
+/* =========================================================
+   COMPLETED CONNECTOR
+========================================================= */
+
+.connectorCompleted {
+    background: #10ab7c;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+    width: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEARNER PREVIEW
+   These rules support the new CourseWizard learner view.
+   The learner preview itself is implemented in CourseWizard.tsx.
+========================================================= */
+
+.content:has(.neurolxp-learner-content-frame) {
+    min-width: 0;
+    min-height: 0;
+}
+
+
+/* =========================================================
+   LEARNER CONTENT FRAME
+========================================================= */
+
+.neurolxp-learner-content-frame {
+    width: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   LEARNER FRAME - DIRECT RESOURCE ELEMENTS
+
+   SCORM, PDF, external HTML, YouTube and Office viewers
+   use iframe elements.
+========================================================= */
+
+.neurolxp-learner-content-frame > iframe {
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 0;
+    min-height: 0;
+
+    display: block;
+
+    border: none;
+
+    margin: 0;
+    padding: 0;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   LEARNER FRAME - VIDEO
+========================================================= */
+
+.neurolxp-learner-content-frame > video {
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 0;
+    min-height: 0;
+
+    display: block;
+
+    margin: 0;
+
+    object-fit: contain;
+
+    background: #111827;
+}
+
+
+/* =========================================================
+   LEARNER FRAME - AUDIO
+========================================================= */
+
+.neurolxp-learner-content-frame audio {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   LEARNER FRAME - IMAGES
+========================================================= */
+
+.neurolxp-learner-content-frame img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   POWERPOINT PREVIEW
+
+   pptx-preview can create its own internal wrapper.
+   Keep the generated presentation inside the learner
+   frame instead of allowing it to expand outside the frame.
+========================================================= */
+
+.neurolxp-learner-content-frame > div {
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/*
+ * pptx-preview generated presentation containers.
+ * These selectors are intentionally broad so that PPT,
+ * PPTX and converted PPTM presentations use the full
+ * available learner viewport.
+ */
+
+.neurolxp-learner-content-frame > div > div {
+    max-width: 100%;
+    max-height: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEARNER FRAME FULLSCREEN
+
+   CourseWizard.tsx uses the native Fullscreen API on
+   .neurolxp-learner-content-frame.
+========================================================= */
+
+.neurolxp-learner-content-frame:fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    background: #ffffff !important;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   FULLSCREEN RESOURCE
+========================================================= */
+
+.neurolxp-learner-content-frame:fullscreen > iframe,
+.neurolxp-learner-content-frame:fullscreen > video {
+    width: 100vw !important;
+    height: 100vh !important;
+
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+
+    border: none !important;
+}
+
+
+/* =========================================================
+   FULLSCREEN POWERPOINT CONTAINER
+========================================================= */
+
+.neurolxp-learner-content-frame:fullscreen > div {
+    width: 100vw !important;
+    height: 100vh !important;
+
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   FULLSCREEN PPTX INNER CONTENT
+========================================================= */
+
+.neurolxp-learner-content-frame:fullscreen > div > div {
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   FULLSCREEN CLOSE / EXIT BUTTON
+
+   CourseWizard.tsx changes the button text to:
+   "Exit Full Screen (Esc)"
+   when fullscreen is active.
+
+   The actual button positioning is also handled by the
+   fullscreen global rule in CourseWizard.tsx.
+========================================================= */
+
+.neurolxp-learner-content-frame:fullscreen > button {
+    position: fixed !important;
+
+    top: 14px !important;
+    right: 14px !important;
+
+    z-index: 99999 !important;
+}
+
+
+/* =========================================================
+   LEARNER FRAME SCROLL PROTECTION
+========================================================= */
+
+.neurolxp-learner-content-frame iframe,
+.neurolxp-learner-content-frame video {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        padding: 22px 20px 32px;
+    }
+
+    .pageHeader {
+        gap: 20px;
+    }
+
+    .headerText h1 {
+        font-size: 25px;
+    }
+
+    .courseIdCard {
+        min-width: 170px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 18px 15px 28px;
+    }
+
+    .pageHeader {
+        flex-direction: column;
+    }
+
+    .courseIdCard {
+        width: 100%;
+
+        align-items: flex-start;
+    }
+
+    .headerText h1 {
+        font-size: 23px;
+    }
+
+    .pageContext h2 {
+        font-size: 18px;
+    }
+
+    .stepper {
+        margin-bottom: 18px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .headerText h1 {
+        font-size: 21px;
+    }
+
+    .headerText p {
+        font-size: 12px;
+    }
+
+    .courseIdCard {
+        padding: 11px 14px;
+    }
+
+}

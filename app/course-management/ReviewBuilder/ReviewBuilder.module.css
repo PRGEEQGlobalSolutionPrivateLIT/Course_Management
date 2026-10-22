@@ -1,0 +1,619 @@
+/* =========================================================
+   REVIEW PAGE
+========================================================= */
+
+.container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #174f84;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+.header h2 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header p {
+    margin: 6px 0 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONTEXT CARD
+========================================================= */
+
+.contextCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 16px 20px;
+
+    border-radius: 16px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+}
+
+.contextCard > div:first-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+}
+
+.contextCard span {
+    color: #6b7280;
+
+    font-size: 11px;
+}
+
+.contextCard strong {
+    max-width: 360px;
+
+    overflow: hidden;
+
+    color: #2a354f;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LEARNER VIEW ACTION
+========================================================= */
+
+.contextAction {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-shrink: 0;
+}
+
+.learnerViewButton {
+    min-height: 38px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.learnerViewButton::before {
+    content: "▶";
+
+    font-size: 9px;
+}
+
+.learnerViewButton:hover {
+    opacity: 0.94;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+.learnerViewButton:active {
+    transform: translateY(0);
+
+    box-shadow:
+        inset 3px 3px 7px #0f3d68,
+        inset -3px -3px 7px #285f91;
+}
+
+.learnerViewButton:focus-visible {
+    outline: 2px solid #174f84;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+.reviewCard {
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.sectionHeader {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.sectionHeader h3 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   READY STATUS
+========================================================= */
+
+.ready {
+    padding: 6px 10px;
+
+    border-radius: 10px;
+
+    background: #dff5ec;
+
+    color: #087f5b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   REVIEW LIST
+========================================================= */
+
+.reviewList {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.reviewItem {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        inset 2px 2px 5px #c5c6cc,
+        inset -2px -2px 5px #ffffff;
+}
+
+.reviewItem h4 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.reviewItem p {
+    margin: 5px 0 0;
+
+    color: #6b7280;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   COMPLETE STATUS
+========================================================= */
+
+.complete {
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border-radius: 9px;
+
+    background: #dff5ec;
+
+    color: #087f5b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PUBLISH INFORMATION CARD
+========================================================= */
+
+.publishCard {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    border-radius: 16px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+}
+
+.publishIcon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+.publishCard h3 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.publishCard p {
+    margin: 5px 0 0;
+
+    color: #6b7280;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 5px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.backButton {
+    min-height: 40px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 0 20px;
+
+    background: #dfe6e9;
+
+    color: #174f84;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+
+    transition:
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+}
+
+.backButton:hover {
+    box-shadow:
+        inset 4px 4px 8px #c5c6cc,
+        inset -4px -4px 8px #ffffff;
+}
+
+.backButton:active {
+    transform: translateY(1px);
+}
+
+.backButton:focus-visible {
+    outline: 2px solid #174f84;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   PUBLISH BUTTON
+========================================================= */
+
+.publishButton {
+    min-height: 40px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 0 22px;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        5px 5px 10px #c5c6cc,
+        -5px -5px 10px #ffffff;
+
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.publishButton:hover {
+    opacity: 0.92;
+
+    transform: translateY(-1px);
+}
+
+.publishButton:active {
+    transform: translateY(0);
+
+    box-shadow:
+        inset 3px 3px 7px #0f3d68,
+        inset -3px -3px 7px #285f91;
+}
+
+.publishButton:focus-visible {
+    outline: 2px solid #174f84;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   DISABLED STATES
+========================================================= */
+
+.backButton:disabled,
+.publishButton:disabled,
+.learnerViewButton:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow:
+        3px 3px 7px #c5c6cc,
+        -3px -3px 7px #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .contextCard {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+    .contextAction {
+        width: 100%;
+
+        justify-content: flex-start;
+    }
+
+    .reviewItem {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .sectionHeader {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .complete {
+        align-self: flex-start;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .container {
+        gap: 16px;
+    }
+
+    .contextCard {
+        padding: 14px 16px;
+    }
+
+    .reviewCard {
+        padding: 17px;
+    }
+
+    .publishCard {
+        align-items: flex-start;
+
+        padding: 16px;
+    }
+
+    .actions {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+    .backButton,
+    .publishButton {
+        width: 100%;
+    }
+
+    .learnerViewButton {
+        width: 100%;
+    }
+}

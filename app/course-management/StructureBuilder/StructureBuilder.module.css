@@ -1,0 +1,888 @@
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 0 0 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.heading {
+    margin-bottom: 22px;
+}
+
+.stepLabel {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+    color: #687386;
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.stepNumber {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 750;
+
+    box-shadow:
+        3px 3px 6px #c5c6cc,
+        -3px -3px 6px #ffffff;
+}
+
+.heading h2 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 24px;
+    font-weight: 750;
+
+    line-height: 1.2;
+}
+
+.heading p {
+    max-width: 720px;
+
+    margin: 7px 0 0;
+
+    color: #687386;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 11px 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 11px;
+
+    background: #f1dddd;
+
+    color: #a33f3d;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.errorIcon {
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #a33f3d;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.levelCard,
+.formCard,
+.structureCard {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border-radius: 17px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        6px 6px 12px #c5c6cc,
+        -6px -6px 12px #ffffff;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.sectionHeader {
+    margin-bottom: 18px;
+}
+
+.sectionHeader h3 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.sectionHeader p {
+    margin: 5px 0 0;
+
+    color: #687386;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   STRUCTURE LEVELS
+========================================================= */
+
+.levelList {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.levelItem {
+    min-height: 72px;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    background: #dfe6e9;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.levelNumber {
+    width: 26px;
+    height: 26px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.levelItem strong {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #2a354f;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.levelItem small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #687386;
+
+    font-size: 9px;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   EXAMPLE CARD
+========================================================= */
+
+.exampleCard {
+    margin-bottom: 18px;
+
+    padding: 12px 14px;
+
+    border-radius: 12px;
+
+    background: #e5eaed;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 11px;
+
+    box-shadow:
+        inset 2px 2px 5px #c5c6cc,
+        inset -2px -2px 5px #ffffff;
+}
+
+.exampleIcon {
+    width: 25px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.exampleCard > div:last-child {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.exampleCard span {
+    color: #687386;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+.exampleCard strong {
+    color: #174f84;
+
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.exampleCard p {
+    margin: 1px 0 0;
+
+    color: #687386;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 17px 18px;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.field {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.field label {
+    color: #2a354f;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.required {
+    margin-left: 3px;
+
+    color: #c44d4d;
+}
+
+
+/* =========================================================
+   INPUT / SELECT
+========================================================= */
+
+.field input,
+.field select {
+    width: 100%;
+    height: 43px;
+
+    padding: 0 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid transparent;
+
+    outline: none;
+
+    border-radius: 11px;
+
+    background: #dfe6e9;
+
+    color: #2a354f;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    box-shadow:
+        inset 3px 3px 7px #c5c6cc,
+        inset -3px -3px 7px #ffffff;
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.field input::placeholder {
+    color: #8b96a5;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color:
+        rgba(23, 79, 132, 0.28);
+
+    box-shadow:
+        inset 2px 2px 5px #c5c6cc,
+        inset -2px -2px 5px #ffffff,
+        0 0 0 2px
+            rgba(23, 79, 132, 0.07);
+}
+
+.field select {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FORM FOOTER
+========================================================= */
+
+.formFooter {
+    margin-top: 18px;
+
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+.addButton {
+    min-height: 40px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        4px 4px 9px #c5c6cc,
+        -4px -4px 9px #ffffff;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.addButton:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        5px 5px 11px #c5c6cc,
+        -5px -5px 11px #ffffff;
+}
+
+
+/* =========================================================
+   CURRENT STRUCTURE
+========================================================= */
+
+.structureHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.structureHeader h3 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.structureHeader p {
+    margin: 5px 0 0;
+
+    color: #687386;
+
+    font-size: 11px;
+}
+
+.structureCount {
+    min-height: 29px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty {
+    min-height: 120px;
+
+    padding: 20px;
+
+    border-radius: 13px;
+
+    background: #dfe6e9;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    text-align: center;
+
+    box-shadow:
+        inset 3px 3px 7px #c5c6cc,
+        inset -3px -3px 7px #ffffff;
+}
+
+.emptyIcon {
+    width: 30px;
+    height: 30px;
+
+    margin-bottom: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #dfe6e9;
+
+    color: #174f84;
+
+    font-size: 17px;
+
+    box-shadow:
+        3px 3px 6px #c5c6cc,
+        -3px -3px 6px #ffffff;
+}
+
+.empty strong {
+    color: #2a354f;
+
+    font-size: 12px;
+}
+
+.empty span {
+    color: #8a94a2;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TREE
+========================================================= */
+
+.treeLevel {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.treeNode {
+    position: relative;
+}
+
+.nodeContent {
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: #dfe6e9;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.nodeDetails {
+    min-width: 0;
+    flex: 1;
+}
+
+.nodeType {
+    display: inline-flex;
+
+    margin-bottom: 5px;
+
+    padding: 4px 7px;
+
+    border-radius: 6px;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    font-size: 8px;
+    font-weight: 750;
+
+    text-transform: uppercase;
+}
+
+.nodeContent h4 {
+    margin: 0;
+
+    color: #2a354f;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.nodeContent p {
+    margin: 5px 0 0;
+
+    color: #687386;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   CHILDREN
+========================================================= */
+
+.children {
+    margin-top: 10px;
+
+    margin-left: 28px;
+
+    padding-left: 14px;
+
+    border-left:
+        1px solid #b8c0c8;
+}
+
+
+/* =========================================================
+   REMOVE
+========================================================= */
+
+.removeButton {
+    flex-shrink: 0;
+
+    min-height: 31px;
+
+    padding: 0 10px;
+
+    border:
+        1px solid
+        rgba(163, 63, 61, 0.16);
+
+    border-radius: 8px;
+
+    background: #dfe6e9;
+
+    color: #a33f3d;
+
+    font-family: inherit;
+
+    font-size: 9px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        3px 3px 6px #c5c6cc,
+        -3px -3px 6px #ffffff;
+}
+
+.removeButton:hover {
+    background: #f1dddd;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.actions {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding-top: 2px;
+}
+
+.secondaryButton,
+.primaryButton {
+    min-height: 40px;
+
+    padding: 0 20px;
+
+    border-radius: 11px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.secondaryButton {
+    border:
+        1px solid
+        rgba(104, 115, 134, 0.18);
+
+    background: #dfe6e9;
+
+    color: #687386;
+
+    box-shadow:
+        4px 4px 8px #c5c6cc,
+        -4px -4px 8px #ffffff;
+}
+
+.secondaryButton:hover {
+    color: #174f84;
+
+    transform: translateY(-1px);
+}
+
+.primaryButton {
+    border: none;
+
+    background: #174f84;
+
+    color: #ffffff;
+
+    box-shadow:
+        4px 4px 9px #c5c6cc,
+        -4px -4px 9px #ffffff;
+}
+
+.primaryButton:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        5px 5px 11px #c5c6cc,
+        -5px -5px 11px #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .levelList {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .levelList {
+        grid-template-columns: 1fr;
+    }
+
+    .levelCard,
+    .formCard,
+    .structureCard {
+        padding: 18px;
+    }
+
+    .nodeContent {
+        flex-direction: column;
+    }
+
+    .removeButton {
+        align-self: flex-start;
+    }
+
+    .children {
+        margin-left: 12px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .heading h2 {
+        font-size: 21px;
+    }
+
+    .actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .secondaryButton,
+    .primaryButton {
+        width: 100%;
+    }
+
+    .formFooter {
+        justify-content: stretch;
+    }
+
+    .addButton {
+        width: 100%;
+    }
+
+}

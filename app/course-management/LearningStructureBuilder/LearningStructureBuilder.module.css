@@ -1,0 +1,2244 @@
+.container {
+    width: 100%;
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 26px 30px 40px;
+
+    box-sizing: border-box;
+
+    color: #2d3b59;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin: 0 0 22px;
+}
+
+.headerText {
+    width: 100%;
+}
+
+.eyebrow,
+.detailEyebrow {
+    display: block;
+    margin-bottom: 7px;
+    color: #53647f;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.header h1 {
+    margin: 0;
+    color: #293755;
+    font-size: 29px;
+    line-height: 1.2;
+    font-weight: 750;
+    letter-spacing: 0;
+}
+
+.header p {
+    max-width: 760px;
+    margin: 7px 0 0;
+    color: #61708a;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ================= SUMMARY ================= */
+
+.summaryBar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0 0 20px;
+    border-radius: 18px;
+    background: #dfe6e9;
+    box-shadow:
+        6px 6px 14px #c6c9cf,
+        -6px -6px 14px #ffffff;
+    overflow: hidden;
+}
+
+.summaryItem {
+    min-height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 22px;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(98, 111, 132, 0.18);
+}
+
+.summaryItem:last-child {
+    border-right: none;
+}
+
+.summaryItem span {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    color: #6c7b91;
+}
+
+.summaryItem strong {
+    margin-top: 4px;
+    font-size: 19px;
+    line-height: 1;
+    color: #2c3b5b;
+}
+
+/* =========================================================
+   WORKSPACE
+   BOTH CARDS HAVE EXACTLY THE SAME WIDTH
+========================================================= */
+
+.workspace {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: grid !important;
+
+    /* Same content width as CourseWizard, equal two-card layout */
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr) !important;
+
+    gap: 20px !important;
+
+    align-items: stretch !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+/* ================= LEFT TREE ================= */
+
+.treePanel {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 540px;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        5px 5px 11px #c5c6cc,
+        -5px -5px 11px #ffffff;
+
+    grid-column: auto !important;
+}
+
+.treeHeader {
+    width: 100%;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 15px 18px;
+
+    box-sizing: border-box;
+
+    border-bottom:
+        1px solid rgba(92, 105, 124, 0.16);
+}
+
+.treeHeader > div {
+    min-width: 0;
+}
+
+.treeHeader span {
+    display: block;
+
+    color: #60708a;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+.treeHeader small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #8793a5;
+
+    font-size: 10px;
+}
+
+.primarySmallButton,
+.primaryButton,
+.secondaryButton,
+.outlineButton,
+.nextButton,
+.backButton,
+.cancelButton {
+    border: 0;
+    border-radius: 10px;
+
+    background: #dfe6e9;
+
+    cursor: pointer;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.primarySmallButton:hover,
+.primaryButton:hover,
+.secondaryButton:hover,
+.outlineButton:hover,
+.nextButton:hover,
+.backButton:hover,
+.cancelButton:hover {
+    transform: translateY(-1px);
+}
+
+.primarySmallButton {
+    flex: 0 0 auto;
+
+    padding: 9px 12px;
+
+    color: #12659b;
+
+    font-size: 10px;
+
+    box-shadow:
+        4px 4px 9px #c6c9cf,
+        -4px -4px 9px #ffffff;
+}
+
+.tree {
+    width: 100%;
+
+    padding: 13px;
+
+    box-sizing: border-box;
+}
+
+.emptyTree {
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+
+    text-align: center;
+}
+
+.emptyIcon,
+.noSelectionIcon,
+.emptySectionIcon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        inset 4px 4px 8px #c6c9cf,
+        inset -4px -4px 8px #ffffff;
+
+    color: #2462a8;
+
+    font-weight: 700;
+}
+
+.emptyIcon {
+    width: 50px;
+    height: 50px;
+
+    font-size: 24px;
+}
+
+.emptyTree strong {
+    margin-top: 16px;
+
+    color: #33415e;
+
+    font-size: 14px;
+}
+
+.emptyTree p {
+    max-width: 230px;
+
+    margin: 7px 0 16px;
+
+    color: #75839a;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.primaryButton {
+    padding: 10px 14px;
+
+    color: #155f97;
+
+    font-size: 10px;
+
+    box-shadow:
+        5px 5px 10px #c6c9cf,
+        -5px -5px 10px #ffffff;
+}
+
+/* ================= TREE ITEMS ================= */
+
+.moduleTreeItem {
+    width: 100%;
+
+    margin-bottom: 7px;
+}
+
+.moduleRow {
+    width: 100%;
+
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 9px;
+
+    box-sizing: border-box;
+
+    border-radius: 13px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        4px 4px 9px #c6c9cf,
+        -4px -4px 9px #ffffff;
+}
+
+.expandButton {
+    width: 25px;
+    height: 25px;
+
+    flex: 0 0 25px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #53637c;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.moduleNumber {
+    width: 27px;
+    height: 27px;
+
+    flex: 0 0 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        inset 2px 2px 5px #c6c9cf,
+        inset -2px -2px 5px #ffffff;
+
+    color: #175e95;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.moduleTitle {
+    min-width: 0;
+
+    flex: 1;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #33415e;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.moduleCount {
+    min-width: 22px;
+    height: 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        inset 2px 2px 4px #c6c9cf,
+        inset -2px -2px 4px #ffffff;
+
+    color: #6d7b91;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.learningTree {
+    margin: 5px 0 5px 22px;
+
+    padding-left: 10px;
+
+    border-left:
+        1px solid rgba(89, 104, 125, 0.22);
+}
+
+.learningRow {
+    width: 100%;
+
+    min-height: 39px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 3px;
+
+    padding: 6px 8px;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: #4a5870;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+.learningRow:hover {
+    background:
+        rgba(255, 255, 255, 0.28);
+}
+
+.learningSelected {
+    background: #dfe6e9;
+
+    box-shadow:
+        inset 3px 3px 7px #c6c9cf,
+        inset -3px -3px 7px #ffffff;
+
+    color: #185f98;
+}
+
+.treeLine {
+    color: #8794a8;
+
+    font-size: 13px;
+}
+
+.learningNumber {
+    width: 25px;
+
+    flex: 0 0 25px;
+
+    color: #708099;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.learningTitle {
+    min-width: 0;
+
+    flex: 1;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.learningCount {
+    min-width: 30px;
+
+    text-align: right;
+
+    color: #8793a5;
+
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.addLearningButton {
+    width: 100%;
+
+    padding: 8px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #17679d;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+/* ================= RIGHT PANEL ================= */
+
+.detailPanel {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 540px;
+    height: 100%;
+
+    margin: 0;
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        5px 5px 11px #c5c6cc,
+        -5px -5px 11px #ffffff;
+
+    grid-column: auto !important;
+}
+
+.detailHeader {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    margin-bottom: 16px;
+}
+
+.detailHeader h2 {
+    margin: 0;
+
+    color: #2d3b59;
+
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.detailHeader p {
+    max-width: 650px;
+
+    margin: 6px 0 0;
+
+    color: #6a7890;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.learningStats {
+    display: flex;
+
+    gap: 8px;
+}
+
+.learningStats div {
+    min-width: 72px;
+
+    padding: 9px 10px;
+
+    border-radius: 11px;
+
+    background: #dfe6e9;
+
+    text-align: center;
+
+    box-shadow:
+        inset 3px 3px 7px #c6c9cf,
+        inset -3px -3px 7px #ffffff;
+}
+
+.learningStats strong {
+    display: block;
+
+    color: #2c5e91;
+
+    font-size: 16px;
+}
+
+.learningStats span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #77859a;
+
+    font-size: 8px;
+}
+
+/* ================= DETAIL CARDS ================= */
+
+.detailCard {
+    width: 100%;
+
+    margin: 0 0 14px;
+
+    padding: 16px;
+
+    box-sizing: border-box;
+
+    border-radius: 16px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        4px 4px 10px #c6c9cf,
+        -4px -4px 10px #ffffff;
+}
+
+.cardHeader {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid rgba(91, 106, 128, 0.16);
+}
+
+.cardHeader h3 {
+    margin: 0;
+
+    color: #33415e;
+
+    font-size: 15px;
+}
+
+.cardHeader span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #78869a;
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.secondaryButton {
+    flex: 0 0 auto;
+
+    padding: 8px 11px;
+
+    color: #155f97;
+
+    font-size: 9px;
+
+    box-shadow:
+        4px 4px 9px #c6c9cf,
+        -4px -4px 9px #ffffff;
+}
+
+/* ================= EMPTY ================= */
+
+.emptySection {
+    min-height: 125px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+
+    text-align: center;
+}
+
+.emptySectionIcon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 17px;
+}
+
+.emptySection strong {
+    margin-top: 8px;
+
+    color: #44516a;
+
+    font-size: 12px;
+}
+
+.emptySection p {
+    max-width: 500px;
+
+    margin: 5px 0 10px;
+
+    color: #7c899c;
+
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+.outlineButton {
+    padding: 8px 12px;
+
+    color: #17679d;
+
+    font-size: 9px;
+
+    box-shadow:
+        inset 2px 2px 5px #c6c9cf,
+        inset -2px -2px 5px #ffffff;
+}
+
+/* ================= CONTENT ================= */
+
+.contentList,
+.assessmentList {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding-top: 12px;
+}
+
+.contentCard,
+.assessmentCard {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 11px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        3px 3px 8px #c6c9cf,
+        -3px -3px 8px #ffffff;
+}
+
+.contentIcon,
+.assessmentIcon {
+    width: 36px;
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        inset 3px 3px 6px #c6c9cf,
+        inset -3px -3px 6px #ffffff;
+
+    color: #2869a5;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.contentInfo,
+.assessmentInfo {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.contentTop {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.contentInfo h4 {
+    min-width: 0;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #33415e;
+
+    font-size: 11px;
+}
+
+.contentInfo p {
+    margin: 3px 0 0;
+
+    color: #6e7d92;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.contentInfo small {
+    display: block;
+
+    margin-top: 3px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #8793a5;
+
+    font-size: 8px;
+}
+
+.assessmentInfo strong {
+    display: block;
+
+    color: #33415e;
+
+    font-size: 11px;
+}
+
+.assessmentInfo span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #6e7d92;
+
+    font-size: 9px;
+}
+
+.contentActions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.readyBadge,
+.requiredBadge {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 3px 6px;
+
+    border-radius: 6px;
+
+    font-size: 7px;
+    font-weight: 800;
+}
+
+.readyBadge {
+    background:
+        rgba(25, 160, 104, 0.12);
+
+    color: #159363;
+}
+
+.requiredBadge {
+    background:
+        rgba(38, 103, 162, 0.1);
+
+    color: #2667a2;
+}
+
+.deleteButton {
+    border: 0;
+
+    border-radius: 8px;
+
+    padding: 6px 8px;
+
+    background: transparent;
+
+    color: #9a5b63;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background:
+        rgba(170, 90, 100, 0.08);
+}
+
+/* ================= NO SELECTION ================= */
+
+.noSelection {
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.noSelectionIcon {
+    width: 58px;
+    height: 58px;
+
+    font-size: 25px;
+}
+
+.noSelection h2 {
+    margin: 15px 0 6px;
+
+    color: #3a4863;
+
+    font-size: 18px;
+}
+
+.noSelection p {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #7b899c;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* ================= CONTENT MODAL ================= */
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(38, 48, 65, 0.34);
+
+    backdrop-filter: blur(5px);
+}
+
+.contentSelectorModal,
+.formModal,
+.assessmentModal {
+    width: min(1080px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border-radius: 22px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        15px 15px 35px
+            rgba(70, 77, 91, 0.28),
+        -10px -10px 25px
+            rgba(255, 255, 255, 0.82);
+}
+
+.formModal {
+    width: min(680px, 100%);
+}
+
+.assessmentModal {
+    width: min(600px, 100%);
+}
+
+.modalHeader {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 23px;
+
+    border-bottom:
+        1px solid rgba(87, 102, 123, 0.16);
+}
+
+.modalHeader > div {
+    min-width: 0;
+}
+
+.modalHeader h2 {
+    margin: 0;
+
+    color: #30405e;
+
+    font-size: 20px;
+}
+
+.modalHeader p {
+    max-width: 700px;
+
+    margin: 5px 0 0;
+
+    color: #7a879a;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.modalHeader span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #65748b;
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.closeButton {
+    width: 30px;
+    height: 30px;
+
+    flex: 0 0 30px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: #dfe6e9;
+
+    color: #68768b;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    box-shadow:
+        3px 3px 7px #c6c9cf,
+        -3px -3px 7px #ffffff;
+}
+
+/* ================= CATEGORY SELECTOR ================= */
+
+.categoryGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    padding: 18px;
+}
+
+.categoryCard {
+    min-width: 0;
+
+    padding: 14px;
+
+    border-radius: 16px;
+
+    background: #dfe6e9;
+
+    box-shadow:
+        4px 4px 10px #c6c9cf,
+        -4px -4px 10px #ffffff;
+}
+
+.categoryHeader h3 {
+    margin: 0;
+
+    color: #33415e;
+
+    font-size: 14px;
+}
+
+.categoryHeader p {
+    margin: 5px 0 12px;
+
+    color: #7a879a;
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.optionGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+}
+
+.contentOption {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 10px;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: #dfe6e9;
+
+    color: #33415e;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    box-shadow:
+        3px 3px 7px #c6c9cf,
+        -3px -3px 7px #ffffff;
+}
+
+.contentOption:hover {
+    transform: translateY(-1px);
+}
+
+.contentOption strong {
+    font-size: 10px;
+}
+
+.contentOption span {
+    margin-top: 4px;
+
+    color: #78869a;
+
+    font-size: 8px;
+    line-height: 1.4;
+}
+
+.contentOption small {
+    margin-top: 7px;
+
+    color: #24669d;
+
+    font-size: 7px;
+    font-weight: 800;
+}
+
+/* ================= FORM ================= */
+
+.formGrid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+
+    padding: 20px 23px;
+}
+
+.formField,
+.fileField {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.formField > span,
+.fileField > span {
+    color: #53637b;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.formField input,
+.formField textarea,
+.fileField input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 0;
+    outline: none;
+
+    border-radius: 10px;
+
+    padding: 10px 11px;
+
+    background: #dfe6e9;
+
+    color: #33415e;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    box-shadow:
+        inset 3px 3px 7px #c6c9cf,
+        inset -3px -3px 7px #ffffff;
+}
+
+.formField textarea {
+    resize: vertical;
+
+    min-height: 85px;
+}
+
+.fileField input[type="file"] {
+    padding: 8px;
+}
+
+.selectedFile {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
+
+    background:
+        rgba(25, 160, 104, 0.08);
+
+    color: #237d5b;
+
+    font-size: 9px;
+}
+
+.selectedFile strong {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.checkboxField {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 4px 0;
+
+    color: #53637b;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.checkboxField input {
+    width: 15px;
+    height: 15px;
+
+    accent-color: #1b75a8;
+}
+
+/* ================= ASSESSMENT NOTICE ================= */
+
+.assessmentNotice {
+    margin: 0 23px 18px;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(38, 103, 162, 0.07);
+
+    box-shadow:
+        inset 2px 2px 5px #c6c9cf,
+        inset -2px -2px 5px #ffffff;
+}
+
+.assessmentNotice strong {
+    color: #28699f;
+
+    font-size: 10px;
+}
+
+.assessmentNotice p {
+    margin: 5px 0 0;
+
+    color: #738197;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+/* ================= MODAL FOOTER ================= */
+
+.modalFooter {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding: 14px 23px 20px;
+}
+
+.cancelButton {
+    padding: 9px 13px;
+
+    color: #5e6d83;
+
+    font-size: 9px;
+
+    box-shadow:
+        4px 4px 9px #c6c9cf,
+        -4px -4px 9px #ffffff;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 18px;
+}
+
+.footerRight {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.footerHint {
+    color: #7b899c;
+
+    font-size: 9px;
+}
+
+.backButton {
+    padding: 9px 14px;
+
+    color: #5e6d83;
+
+    font-size: 10px;
+
+    box-shadow:
+        4px 4px 9px #c6c9cf,
+        -4px -4px 9px #ffffff;
+}
+
+.nextButton {
+    padding: 10px 17px;
+
+    color: #155f97;
+
+    font-size: 10px;
+
+    box-shadow:
+        5px 5px 10px #c6c9cf,
+        -5px -5px 10px #ffffff;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+/*
+ * IMPORTANT:
+ * Do NOT add a 1050px breakpoint that changes the
+ * desktop workspace to 35% / 65%.
+ *
+ * Desktop must remain 50% / 50%.
+ */
+
+@media (max-width: 900px) {
+    .container {
+        padding: 22px 20px 32px;
+    }
+
+    .workspace {
+        width: 100% !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .treePanel,
+    .detailPanel {
+        min-height: auto;
+        height: auto;
+    }
+
+    .summaryBar {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .summaryItem:nth-child(2) {
+        border-right: none;
+    }
+
+    .emptyTree {
+        min-height: 280px;
+    }
+
+    .noSelection {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 700px) {
+    .categoryGrid,
+    .optionGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .summaryBar {
+        grid-template-columns: 1fr;
+    }
+
+    .summaryItem {
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(98, 111, 132, 0.18);
+    }
+
+    .summaryItem:last-child {
+        border-bottom: none;
+    }
+
+    .detailHeader {
+        flex-direction: column;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .contentCard,
+    .assessmentCard {
+        align-items: flex-start;
+    }
+
+    .contentActions {
+        flex-direction: column;
+
+        align-items: flex-end;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .footerRight {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .footerHint {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .treeHeader {
+        padding: 13px 14px;
+    }
+
+    .detailPanel {
+        padding: 15px;
+    }
+}
+
+/* =========================================================
+   UNIVERSITY / COLLEGE ACADEMIC HIERARCHY
+   Supports:
+   Module → Chapter → Unit → Topic
+
+   These selectors only style the extra nested DIV hierarchy used
+   by the University / College branch. The existing non-academic
+   Module → Learning layout remains unchanged.
+========================================================= */
+
+/* Academic chapter container */
+.learningTree > div {
+    position: relative;
+    margin-bottom: 7px;
+}
+
+/* Academic chapter row */
+.learningTree > div > div:first-child {
+    min-height: 38px;
+    box-sizing: border-box;
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+/* Academic chapter number/title */
+.learningTree > div > div:first-child .learningTitle {
+    color: #33415e;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* Units wrapper under a chapter */
+.learningTree > div > div:nth-child(2) {
+    position: relative;
+    margin-left: 5px;
+    padding-left: 15px !important;
+    border-left: 1px solid rgba(89, 104, 125, 0.20);
+}
+
+/* Individual academic unit container */
+.learningTree > div > div:nth-child(2) > div {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+/* Academic unit row */
+.learningTree > div > div:nth-child(2) > div > div:first-child {
+    min-height: 36px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+/* Unit title */
+.learningTree > div > div:nth-child(2) > div > div:first-child .learningTitle {
+    color: #465571;
+    font-size: 10px;
+    font-weight: 750;
+}
+
+/* Topic wrapper under a unit */
+.learningTree > div > div:nth-child(2) > div > div:nth-child(2) {
+    position: relative;
+    margin-left: 6px;
+    padding-left: 14px !important;
+    border-left: 1px dashed rgba(89, 104, 125, 0.22);
+}
+
+/* Topic rows keep existing Learning-item behavior but visually
+   sit at the fourth level of the academic hierarchy. */
+.learningTree
+    > div
+    > div:nth-child(2)
+    > div
+    > div:nth-child(2)
+    .learningRow {
+    min-height: 36px;
+    margin-bottom: 4px;
+    padding: 6px 8px;
+    border-radius: 10px;
+}
+
+/* Stronger selected-topic state */
+.learningTree
+    > div
+    > div:nth-child(2)
+    > div
+    > div:nth-child(2)
+    .learningSelected {
+    background: #dfe6e9;
+    box-shadow:
+        inset 3px 3px 7px #c6c9cf,
+        inset -3px -3px 7px #ffffff;
+    color: #174f84;
+}
+
+/* Academic numbering needs more space for values such as 1.2.3.4 */
+.learningTree
+    > div
+    > div:nth-child(2)
+    > div
+    > div:nth-child(2)
+    .learningNumber {
+    width: 48px;
+    flex: 0 0 48px;
+    font-size: 8px;
+    line-height: 1.2;
+}
+
+/* Content / assessment count on Topic */
+.learningTree
+    > div
+    > div:nth-child(2)
+    > div
+    > div:nth-child(2)
+    .learningCount {
+    min-width: 34px;
+}
+
+/* Add Chapter stays at Module level */
+.learningTree > .addLearningButton {
+    margin-top: 5px;
+    padding: 8px 8px 8px 12px;
+    border-radius: 9px;
+}
+
+/* Add Unit inside Chapter */
+.learningTree
+    > div
+    > div:nth-child(2)
+    > .addLearningButton {
+    margin-top: 3px;
+    padding-left: 10px;
+}
+
+/* Add Topic inside Unit */
+.learningTree
+    > div
+    > div:nth-child(2)
+    > div
+    > div:nth-child(2)
+    > .addLearningButton {
+    margin-top: 3px;
+    padding-left: 9px;
+}
+
+/* Improve hierarchy expand buttons without changing the common
+   expand-button definition used elsewhere. */
+.learningTree > div .expandButton {
+    width: 23px;
+    height: 23px;
+    flex: 0 0 23px;
+    font-size: 16px;
+}
+
+/* Academic hierarchy remains readable if many levels are present. */
+.tree {
+    overflow-x: hidden;
+}
+
+/* ================= ACADEMIC HIERARCHY RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .learningTree {
+        margin-left: 14px;
+        padding-left: 8px;
+    }
+
+    .learningTree > div > div:nth-child(2) {
+        padding-left: 10px !important;
+    }
+
+    .learningTree
+        > div
+        > div:nth-child(2)
+        > div
+        > div:nth-child(2) {
+        padding-left: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .learningTree {
+        margin-left: 8px;
+        padding-left: 6px;
+    }
+
+    .learningTree > div > div:first-child {
+        padding-left: 4px !important;
+    }
+
+    .learningTree > div > div:nth-child(2) {
+        margin-left: 0;
+        padding-left: 7px !important;
+    }
+
+    .learningTree
+        > div
+        > div:nth-child(2)
+        > div
+        > div:nth-child(2) {
+        margin-left: 0;
+        padding-left: 7px !important;
+    }
+
+    .learningTree
+        > div
+        > div:nth-child(2)
+        > div
+        > div:nth-child(2)
+        .learningNumber {
+        width: 42px;
+        flex-basis: 42px;
+        font-size: 7px;
+    }
+}
+
+/* =========================================================
+   TEXT EDITOR + AI ANALYSE & IMPORT
+   Added for the two new Learning Structure capabilities only.
+   Existing Learning Structure styles above remain unchanged.
+========================================================= */
+
+/* ================= LEARNING CONTENT ACTIONS ================= */
+
+.contentCreationActions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.createContentButton,
+.uploadEditButton,
+.addResourceButton,
+.aiImportButton {
+    flex: 0 0 auto;
+    border: 0;
+    border-radius: 10px;
+    background: #dfe6e9;
+    cursor: pointer;
+    font-size: 9px;
+    font-weight: 800;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.createContentButton:hover,
+.uploadEditButton:hover,
+.addResourceButton:hover,
+.aiImportButton:hover {
+    transform: translateY(-1px);
+}
+
+.createContentButton,
+.aiImportButton {
+    padding: 9px 12px;
+    color: #155f97;
+    box-shadow:
+        4px 4px 9px #c6c9cf,
+        -4px -4px 9px #ffffff;
+}
+
+.uploadEditButton,
+.addResourceButton {
+    padding: 9px 12px;
+    color: #53637b;
+    box-shadow:
+        4px 4px 9px #c6c9cf,
+        -4px -4px 9px #ffffff;
+}
+
+.createContentButton:active,
+.uploadEditButton:active,
+.addResourceButton:active,
+.aiImportButton:active {
+    transform: translateY(0);
+    box-shadow:
+        inset 3px 3px 7px #c6c9cf,
+        inset -3px -3px 7px #ffffff;
+}
+
+/* ================= AI IMPORT ENTRY ================= */
+
+.aiImportBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 18px;
+    padding: 13px 16px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: #dfe6e9;
+    box-shadow:
+        4px 4px 10px #c6c9cf,
+        -4px -4px 10px #ffffff;
+}
+
+.aiImportBarText {
+    min-width: 0;
+    flex: 1;
+}
+
+.aiImportBarText strong {
+    display: block;
+    color: #33415e;
+    font-size: 12px;
+}
+
+.aiImportBarText span {
+    display: block;
+    margin-top: 4px;
+    color: #75839a;
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+/* ================= AI ANALYSE MODAL ================= */
+
+.aiImportModal {
+    width: min(900px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 22px;
+    background: #dfe6e9;
+    box-shadow:
+        15px 15px 35px rgba(70, 77, 91, 0.28),
+        -10px -10px 25px rgba(255, 255, 255, 0.82);
+}
+
+.aiImportBody {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 23px;
+}
+
+.aiUploadArea {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 22px;
+    box-sizing: border-box;
+    border: 1px dashed rgba(83, 100, 127, 0.34);
+    border-radius: 15px;
+    background: #dfe6e9;
+    text-align: center;
+    box-shadow:
+        inset 3px 3px 8px #c6c9cf,
+        inset -3px -3px 8px #ffffff;
+}
+
+.aiUploadArea strong {
+    color: #33415e;
+    font-size: 12px;
+}
+
+.aiUploadArea p {
+    max-width: 560px;
+    margin: 0;
+    color: #78869a;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.aiUploadArea input[type="file"] {
+    width: min(480px, 100%);
+    margin-top: 5px;
+    padding: 9px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    background: #dfe6e9;
+    color: #53637b;
+    font-family: inherit;
+    font-size: 9px;
+    box-shadow:
+        3px 3px 7px #c6c9cf,
+        -3px -3px 7px #ffffff;
+}
+
+.aiSelectedFile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border-radius: 11px;
+    background: rgba(25, 160, 104, 0.08);
+    color: #237d5b;
+    font-size: 9px;
+}
+
+.aiSelectedFile strong {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.aiSelectedFile span {
+    flex: 0 0 auto;
+    color: #68768b;
+    font-size: 8px;
+}
+
+/* ================= AI ANALYSIS STATUS ================= */
+
+.aiAnalysisStatus {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 13px;
+    border-radius: 12px;
+    background: rgba(38, 103, 162, 0.07);
+    box-shadow:
+        inset 2px 2px 5px #c6c9cf,
+        inset -2px -2px 5px #ffffff;
+}
+
+.aiAnalysisStatus strong {
+    display: block;
+    color: #28699f;
+    font-size: 10px;
+}
+
+.aiAnalysisStatus p {
+    margin: 4px 0 0;
+    color: #738197;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.aiSpinner {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    border: 2px solid rgba(38, 103, 162, 0.18);
+    border-top-color: #28699f;
+    border-radius: 50%;
+    animation: learningStructureAiSpin 0.8s linear infinite;
+}
+
+@keyframes learningStructureAiSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.aiError {
+    padding: 11px 13px;
+    border-radius: 11px;
+    background: rgba(170, 90, 100, 0.08);
+    color: #95545d;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* ================= AI ANALYSIS PREVIEW ================= */
+
+.aiPreview {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.aiPreviewHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(91, 106, 128, 0.16);
+}
+
+.aiPreviewHeader h3 {
+    margin: 0;
+    color: #33415e;
+    font-size: 14px;
+}
+
+.aiPreviewHeader p {
+    margin: 4px 0 0;
+    color: #78869a;
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+.aiPreviewStats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.aiPreviewStat {
+    min-width: 70px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #dfe6e9;
+    text-align: center;
+    box-shadow:
+        inset 3px 3px 7px #c6c9cf,
+        inset -3px -3px 7px #ffffff;
+}
+
+.aiPreviewStat strong {
+    display: block;
+    color: #2c5e91;
+    font-size: 14px;
+}
+
+.aiPreviewStat span {
+    display: block;
+    margin-top: 2px;
+    color: #77859a;
+    font-size: 7px;
+    font-weight: 700;
+}
+
+.aiPreviewList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.aiPreviewModule {
+    padding: 11px 12px;
+    border-radius: 12px;
+    background: #dfe6e9;
+    box-shadow:
+        3px 3px 8px #c6c9cf,
+        -3px -3px 8px #ffffff;
+}
+
+.aiPreviewModuleHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.aiPreviewModuleHeader strong {
+    min-width: 0;
+    color: #33415e;
+    font-size: 10px;
+}
+
+.aiPreviewModuleHeader span {
+    flex: 0 0 auto;
+    color: #708099;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.aiPreviewModule p {
+    margin: 5px 0 0;
+    color: #7b899c;
+    font-size: 8px;
+    line-height: 1.45;
+}
+
+.aiWarningSection,
+.aiUnclassifiedSection {
+    padding: 12px 13px;
+    border-radius: 12px;
+    background: #dfe6e9;
+    box-shadow:
+        inset 2px 2px 5px #c6c9cf,
+        inset -2px -2px 5px #ffffff;
+}
+
+.aiWarningSection strong,
+.aiUnclassifiedSection strong {
+    display: block;
+    color: #53637b;
+    font-size: 9px;
+}
+
+.aiWarningSection ul,
+.aiUnclassifiedSection ul {
+    margin: 7px 0 0;
+    padding-left: 18px;
+    color: #75839a;
+    font-size: 8px;
+    line-height: 1.55;
+}
+
+/* ================= TEXT EDITOR CONTENT STATE ================= */
+
+.editorContentBadge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 3px 6px;
+    border-radius: 6px;
+    background: rgba(38, 103, 162, 0.1);
+    color: #2667a2;
+    font-size: 7px;
+    font-weight: 800;
+}
+
+.editContentButton {
+    border: 0;
+    border-radius: 8px;
+    padding: 6px 8px;
+    background: transparent;
+    color: #17679d;
+    font-size: 8px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.editContentButton:hover {
+    background: rgba(38, 103, 162, 0.07);
+}
+
+/* ================= NEW FUNCTION RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .aiImportBar {
+        align-items: flex-start;
+    }
+
+    .aiPreviewHeader {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+    .contentCreationActions,
+    .aiImportBar,
+    .aiSelectedFile {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .createContentButton,
+    .uploadEditButton,
+    .addResourceButton,
+    .aiImportButton {
+        width: 100%;
+    }
+
+    .aiPreviewStats {
+        width: 100%;
+    }
+
+    .aiPreviewStat {
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .aiImportBody {
+        padding: 16px 15px;
+    }
+
+    .aiUploadArea {
+        padding: 17px 13px;
+    }
+}
+
